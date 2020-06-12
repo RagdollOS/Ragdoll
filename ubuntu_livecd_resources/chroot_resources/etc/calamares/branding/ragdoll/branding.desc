@@ -1,0 +1,25 @@
+---
+componentName: ragdoll
+
+strings:
+    productName:         Ragdoll
+    shortProductName:    Ragdoll
+    version:             18.04
+    shortVersion:        bionic
+    versionedName:       Ragdoll
+    shortVersionedName:  Ragdoll 18.04
+    bootloaderEntryName: Ragdoll 18.04
+    productUrl:          https://ragdoll.com/
+    supportUrl:          https://ragdoll.com/support/
+
+images:
+    productLogo:         "logo.png"
+    productIcon:         "icon.png"
+    productWelcome:      "welcome.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#808080"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#0068C8"

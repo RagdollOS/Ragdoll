@@ -1,0 +1,85 @@
+# Kernel Options
+d-i debian-installer/add-kernel-opts string net.ifnames=0
+
+# Preseeding only locale sets language, country and locale.
+d-i debian-installer/locale string en_US
+
+# Keyboard selection.
+d-i keyboard-configuration/layoutcode string us 
+
+# Network
+d-i netcfg/get_hostname string ragdoll 
+d-i netcfg/get_domain string ragdoll.com
+d-i netcfg/choose_interface select auto
+d-i netcfg/dhcp_failed note
+d-i netcfg/dhcp_timeout string 10
+d-i netcfg/dhcp_options select Do not configure the network at this time
+
+# Users
+d-i passwd/user-fullname string ragdoll
+d-i passwd/username string ragdoll
+d-i passwd/user-password-crypted password $1$Ol5s0t1F$flgWRWE/ggCAXoTOYxoi00 
+d-i passwd/root-login boolean true
+d-i passwd/root-password-crypted password $1$Ol5s0t1F$flgWRWE/ggCAXoTOYxoi00
+d-i user-setup/allow-password-weak boolean true
+
+
+# Clock
+d-i clock-setup/utc-auto boolean true
+d-i clock-setup/utc boolean true
+d-i time/zone string Asia/Shanghai
+d-i clock-setup/ntp boolean true
+
+
+# Umount all
+d-i partman/early_command string \
+USBDEV=$(list-devices usb-partition | sed "s/\(.*\)./\1/");\
+BOOTDEV=$(list-devices disk | grep -v "$USBDEV" | head -1);\
+debconf-set partman-auto/disk $BOOTDEV;\
+debconf-set grub-installer/bootdev $BOOTDEV;
+
+### Partitioning
+d-i partman-auto/disk string /dev/sda
+d-i partman-auto/method string regular
+d-i partman-lvm/device_remove_lvm boolean true
+d-i partman-md/device_remove_md boolean true
+d-i partman-auto/choose_recipe select atomic
+
+# This makes partman automatically partition without confirmation
+d-i partman-partitioning/confirm_write_new_label boolean true
+d-i partman/choose_partition select finish
+d-i partman/confirm boolean true
+d-i partman/confirm_nooverwrite boolean true
+
+
+# Packages, Mirrors, Image
+d-i mirror/country string CN
+d-i mirror/http/proxy string
+d-i apt-setup/restricted boolean true
+d-i apt-setup/universe boolean true
+d-i apt-setup/extra boolean true
+d-i apt-setup/optional boolean true
+
+
+# Task Select
+d-i pkgsel/install-language-support boolean false
+tasksel tasksel/first multiselect server
+
+# Install KDE translation packages.
+d-i	pkgsel/language-pack-patterns	string language-pack-kde-$LL 
+# kde-i18n-$LL
+
+# Grub
+d-i grub-installer/grub2_instead_of_grub_legacy boolean true
+d-i grub-installer/only_debian boolean true
+d-i grub-installer/with_other_os boolean true
+d-i finish-install/reboot_in_progress note
+
+# Security Update
+d-i pkgsel/update-policy select none
+
+# Late Command
+d-i preseed/late_command string wget http://mirrors.aliyun.com/ubuntu_18.04.sources.list -O /target/etc/apt/sources.list; \
+in-target usermod -aG sudo ragdoll; \
+in-target rm -rf /var/log/*
+

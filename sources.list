@@ -1,0 +1,2 @@
+deb  bionic main restricted universe multiverse 
+ deb  bionic-security main restricted universe multiverse deb  bionic-updates main restricted universe multiverse deb  bionic-proposed main restricted universe multiverse deb  bionic-backports main restricted universe multiverse deb-src  bionic main restricted universe multiverse deb-src  bionic-security main restricted universe multiverse deb-src  bionic-updates main restricted universe multiverse deb-src  bionic-proposed main restricted universe multiverse deb-src  bionic-backports main restricted universe multiverse

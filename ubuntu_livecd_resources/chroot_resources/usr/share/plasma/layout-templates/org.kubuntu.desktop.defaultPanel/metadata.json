@@ -1,0 +1,71 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "kubuntu-devel@lists.ubuntu.com",
+                "Name": "Kubuntu Developers"
+            },
+            {
+                "Email": "aseigo@kde.org",
+                "Name": "Aaron Seigo"
+            }
+        ],
+        "Category": "",
+        "Dependencies": [
+        ],
+        "EnabledByDefault": true,
+        "Id": "org.kubuntu.desktop.defaultPanel",
+        "License": "LGPLv2+",
+        "Name": "Kubuntu Default Panel",
+        "Name[bs]": "Kubuntu Podrazumijevani panel",
+        "Name[ca@valencia]": "Kubuntu Plafó per omissió",
+        "Name[ca]": "Kubuntu Plafó per omissió",
+        "Name[cs]": "Kubuntu Výchozí panel",
+        "Name[da]": "Kubuntu Standardpanel",
+        "Name[de]": "Kubuntu Standard-Kontrollleiste",
+        "Name[el]": "Kubuntu Προκαθορισμένος πίνακας",
+        "Name[en_GB]": "Kubuntu Default Panel",
+        "Name[es]": "Kubuntu Panel por omisión",
+        "Name[et]": "Kubuntu Vaikimisi paneel",
+        "Name[eu]": "Kubuntu Panel lehenetsia",
+        "Name[fi]": "Kubuntu Oletuspaneeli",
+        "Name[fr]": "Kubuntu Tableau de bord par défaut",
+        "Name[gl]": "Kubuntu Panel predeterminado",
+        "Name[hu]": "Kubuntu Alapértelmezett panel",
+        "Name[id]": "Kubuntu Panel Baku",
+        "Name[is]": "Kubuntu Sjálfgefið spjald",
+        "Name[it]": "Kubuntu Pannello predefinito",
+        "Name[ja]": "Kubuntu 標準のパネル",
+        "Name[ko]": "Kubuntu 기본 패널",
+        "Name[lt]": "Kubuntu Numatytas skydelis",
+        "Name[nb]": "Kubuntu Standardpanel",
+        "Name[nds]": "Kubuntu Standardpaneel",
+        "Name[nl]": "Kubuntu Standaard paneel",
+        "Name[nn]": "Kubuntu Standardpanel",
+        "Name[pl]": "Kubuntu Domyślny panel",
+        "Name[pt]": "Kubuntu Painel Predefinido",
+        "Name[pt_BR]": "Kubuntu Painel padrão",
+        "Name[ru]": "Kubuntu Стандартная панель",
+        "Name[sk]": "Kubuntu Štandardný panel",
+        "Name[sl]": "Kubuntu Privzeti pult",
+        "Name[sr@ijekavian]": "Kubuntu Подразумијевани панел",
+        "Name[sr@ijekavianlatin]": "Kubuntu Podrazumijevani panel",
+        "Name[sr@latin]": "Kubuntu Podrazumevani panel",
+        "Name[sr]": "Kubuntu Подразумевани панел",
+        "Name[sv]": "Kubuntu Standardpanel",
+        "Name[tr]": "Kubuntu Öntanımlı Pano",
+        "Name[uk]": "Kubuntu Типова панель",
+        "Name[x-test]": "xxKubuntu Default Panelxx",
+        "Name[zh_CN]": "Kubuntu 默认面板",
+        "Name[zh_TW]": "Kubuntu 預設面板",
+        "ServiceTypes": [
+            "Plasma/LayoutTemplate"
+        ],
+        "Version": "1.0",
+        "Website": "http://kubuntu.org/"
+    },
+    "X-Plasma-ContainmentCategories": [
+        "panel"
+    ],
+    "X-Plasma-Shell": "plasmashell"
+}

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+_Name=Install Ragdoll Desktop 18.04 LTS
+_GenericName=Install Ragdoll Desktop
+Exec=bash -c "export BROWSER='sudo -H -u ragdoll firefox'; sudo -E calamares"
+_Comment=Calamares — System Installer
+Icon=calamares
+Terminal=false
+StartupNotify=true
+Categories=Qt;System;
+Keywords=installer;calamares;system;
