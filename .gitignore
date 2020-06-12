@@ -1,0 +1,11 @@
+pre_download
+cache
+build
+image
+ubuntu_base_system
+debian-installer
+reprepro
+germinate
+*.iso
+*.swp
+*.txt
